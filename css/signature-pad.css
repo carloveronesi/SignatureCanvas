@@ -8,6 +8,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -45,6 +46,11 @@ body {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
   border-radius: 4px;
   padding: 16px;
+  margin-bottom: 25px;
+}
+
+.signature-pad.sign-preview{
+  padding: 0;
 }
 
 .signature-pad::before,
@@ -105,10 +111,6 @@ canvas {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 8px;
-}
-
-#github img {
-  border: 0;
 }
 
 @media (max-width: 940px) {
