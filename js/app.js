@@ -12,6 +12,7 @@ var clearButton = wrapper.querySelector("[data-action=clear]");
 var undoButton = wrapper.querySelector("[data-action=undo]");
 var confirmButton = wrapper.querySelector("[data-action=confirm]");
 var skipButton = wrapper.querySelector("[data-action=skip]");
+var preview = document.getElementById("preview");
 
 /*********************************************************************
  * Canvas
@@ -78,12 +79,8 @@ skipButton.addEventListener("click", function (event) {
  
 //preview image
 function previewImage(signatureImage) {
-  var found = document.getElementsByTagName("img");
-  if(found.length != 0){
-    found[0].remove();
-  }
-  var DOM_img = document.createElement("img");
-  DOM_img.src = signatureImage;
+
+  preview.src = signatureImage;
 
   document.body.appendChild(DOM_img);
 }
